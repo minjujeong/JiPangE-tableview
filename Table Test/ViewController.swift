@@ -9,10 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var selectedBuilding: Building?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("\(selectedBuilding?.name)")
     }
 
     override func didReceiveMemoryWarning() {

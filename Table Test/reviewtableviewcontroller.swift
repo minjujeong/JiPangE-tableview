@@ -88,14 +88,22 @@ class reviewtableviewcontroller: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
+    
+        // 목적지
+        let destVC = segue.destination as! ViewController
 
+        
+        let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+        let selected = buildings[selectedIndex!]
+        destVC.selectedBuilding = selected
+    // destVC = 목적지인 뷰컨트롤러를 받는 이름 -> 즉 뷰컨트롤러의 selectedBuilding에 넣어라.
+    // MARK: - Segues
 }
+    
